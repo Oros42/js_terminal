@@ -45,7 +45,7 @@ var q2=[];
 var host="ecirtam";
 var can_autocomp=false;
 
-function write(t, b, f, s){if(t.length>0){input_lock=true;if(s!=undefined&&s>0){document.getElementById("c").className="";document.getElementsByClassName(b)[0].innerHTML+=htmlEntities(t.substring(0,1));window.setTimeout(function(){write(t.substring(1,t.length),b,f,s);},s);}else{document.getElementsByClassName(b)[0].innerHTML+=htmlEntities(t);window.scroll(0,window.screenMaxY);input_lock=false;if(f!=undefined){f();}}}else{document.getElementById("c").className="curs";window.scroll(0,window.screenMaxY);input_lock=false;if(f!=undefined){f();}}}
+function write(t, b, f, s){if(t.length>0){input_lock=true;if(s!=undefined&&s>0){document.getElementById("c").className="";document.getElementsByClassName(b)[0].innerHTML+=htmlEntities(t.substring(0,1));window.setTimeout(function(){write(t.substring(1,t.length),b,f,s);},s);}else{document.getElementsByClassName(b)[0].innerHTML+=htmlEntities(t);window.scroll(0,window.scrollMaxY);input_lock=false;if(f!=undefined){f();}}}else{document.getElementById("c").className="curs";window.scroll(0,window.scrollMaxY);input_lock=false;if(f!=undefined){f();}}}
 
 function newline(s){
 	document.getElementsByClassName('a')[0].className='i';
