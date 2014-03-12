@@ -28,7 +28,7 @@ var man={};
 man['cat']="\nCAT(1)                   User Commands                               CAT(1)\n\nNAME\n       cat - concatenate files and print on the standard output\n\nSYNOPSIS\n       cat [FILE]...\n\nDESCRIPTION\n       Concatenate FILE(s), or standard input, to standard output.\n\nEXAMPLES\n       cat README.txt\n              Output README.txt's contents to standard output.\n";
 
 var programs={};
-programs['help']=function(a){var c="\nAvailable commands :";for(var e in programs){c+="\n    "+e;} return c;};
+programs['help']=function(a){var c="\nAvailable commands :";for(var e in programs){c+="\n    "+e;} return c+"\nYou can use Tab for autocomplete.";};
 programs['ls']=function(a){return "\nREADME.txt";};
 programs['cat']=function(a){a=a.join('');if(a==''){return "\nPlease give me a file name !";}else if(files[a]!=undefined){return files[a];}else{return "\ncat: "+a+": No such file or directory";}};
 programs['pwd']=function(a){return "\n/home/"+login;};
@@ -103,7 +103,7 @@ var enter=function (){
 			step+=1;
 			document.getElementById("a").innerHTML+='<span class="l"></div>';
 			s='   \\\\ '+"\n"
-			+'  __()'+"\n"
+			+'  __().'+"\n"
 			+'o(_-\\_'+"\n";
 			write(s, 'l', enter, 50);
 			break
