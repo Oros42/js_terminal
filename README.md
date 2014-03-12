@@ -4,6 +4,12 @@ js_terminal
 A fake javascript terminal
 
 
+Demo
+====
+
+http://oros42.github.io/js_terminal/
+
+
 Key
 ===
 
