@@ -18,3 +18,18 @@ Key
 ```Down``` : forward in history  
 ```Alt```+```Backspace``` : remove word  
 ```Ctrl```+```d``` : exit  
+
+
+Commands
+========
+
+```help```   
+```ls [dir]```   
+```cd <dir>```   
+```cat <file>```   
+```pwd```   
+```mkdir <dir>```   
+```man```   
+```clear```   
+```exit```   
+```echo "<text> > <file>"```   

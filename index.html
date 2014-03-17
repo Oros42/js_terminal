@@ -35,7 +35,7 @@ man['cat']="CAT(1)                   User Commands                              
 
 var programs={};
 programs['help']=function(a){var c="Available commands :";for(var e in programs){c+="\n    "+e;} return c+"\nYou can use Tab for autocomplete.";};
-programs['ls']=function(a){return fs.ls().join("\n");};
+programs['ls']=function(a){if(typeof a!='string'){a=a.join('');}if(a==''|| a=='.'){return fs.ls().join("\n");}else{var p="/"+fs.pwd.join('/');if(programs['cd'](a)){a="ls: "+a+": No such file or directory";}else{a=fs.ls().join("\n");}programs['cd'](p);return a;}};
 programs['cd']=function(a){if(typeof a!='string'){a=a.join('');}if(a==''|| a=='.'){return '';}else{a=a.split('/');if(a[0]==''){while(fs.pwd!=''){fs.cd('..');}a.shift();}while(d=a.shift()){if(d!=''){if(!fs.cd(d)){return "cd: "+d+": No such file or directory of this type"}}}}};
 programs['cat']=function(a){if(typeof a!='string'){a=a.join('');}if(a==''){return "Please give me a file name !";}else{var	s=fs.cat(a);if(s){if(typeof s!='string'){return ''}else{return s;}}else{return "cat: "+a+": No such file or directory";}}};
 programs['pwd']=function(a){return "/"+fs.pwd.join('/');};
