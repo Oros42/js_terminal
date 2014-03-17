@@ -23,13 +23,13 @@ Key
 Commands
 ========
 
-```help```   
-```ls [dir]```   
-```cd <dir>```   
-```cat <file>```   
-```pwd```   
-```mkdir <dir>```   
-```man```   
-```clear```   
-```exit```   
-```echo "<text> > <file>"```   
+-```help```  
+-```ls [dir]```  
+-```cd <dir>```  
+-```cat <file>```  
+-```pwd```  
+-```mkdir <dir>```  
+-```man```  
+-```clear```  
+-```exit```  
+-```echo "<text> > <file>"```  
