@@ -1,7 +1,7 @@
 js_terminal
 ===========
 
-A fake javascript terminal
+A javascript terminal juste for fun.
 
 
 Demo
@@ -46,3 +46,5 @@ hello
 ```
 
 Only files in ```/usr/bin``` are interpreted as programs.  
+  
+/!\ When you close the terminal, nothing is saved !  
