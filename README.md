@@ -41,6 +41,8 @@ Write programs
 You can write your own programs !  
 ```
 cd /usr/bin
-echo "function(a){return 'Hello world!'">hello
+echo "function(a){return 'Hello world!'};">hello
 hello
 ```
+
+Only files in ```/usr/bin``` are interpreted as programs.  
