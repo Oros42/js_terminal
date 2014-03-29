@@ -25,11 +25,22 @@ Commands
 
 -```help```  
 -```ls [dir]```  
--```cd <dir>```  
+-```cd <dir>[/dir]```  
 -```cat <file>```  
 -```pwd```  
--```mkdir <dir>```  
+-```mkdir <dir>[/dir]```  
 -```man```  
 -```clear```  
 -```exit```  
--```echo "<text> > <file>"```  
+-```echo "<text>"[ >[>] <file>]```  
+
+
+Write programs
+==============
+
+You can write your own programs !  
+```
+cd /usr/bin
+echo "function(a){return 'Hello world!'">hello
+hello
+```
