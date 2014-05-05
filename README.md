@@ -1,7 +1,7 @@
 js_terminal
 ===========
 
-A javascript terminal juste for fun.
+A fake javascript terminal
 
 
 Demo
@@ -18,6 +18,7 @@ Key
 ```Down``` : forward in history  
 ```Alt```+```Backspace``` : remove word  
 ```Ctrl```+```d``` : exit  
+```Ctrl```+```v``` : past  
 
 
 Commands
