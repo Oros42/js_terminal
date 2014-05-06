@@ -57,13 +57,15 @@ say_hello Bob
 Example 3 :  
 ```
 cd /usr/bin
-echo "function(a){return 'Hello '+a;};">say_hello
-say_hello Bob
+echo "function(a){var p=fs.pwd; prs['cd']("/home/"+login); fs.write('test.txt', 'hello'); prs['cd'](p);};">write_hello
+write_hello
+cd
+cat test.txt
 ```
 
 ```fs.pwd``` : return path in array  
 ```fs.cat(<file name>)``` : return contants of file   
-```fs.cd(<path>)``` : return true if change directory succeeds. Path can be a string or an array  
+```fs.cd(<path>)``` : path should be a directory in fs.ls() list. Return true if change directory succeeds. Path can be a string or an array  
 ```fs.ls()``` : return an array of directory contants  
 ```fs.mkdir(<directory name>)``` : make a new directory  
 ```fs.write(<file name>, <file contants>)``` : write file  
