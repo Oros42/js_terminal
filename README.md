@@ -30,7 +30,7 @@ Commands
 -```cat <file>```  
 -```pwd```  
 -```mkdir <dir>[/dir]```  
--```man``` (Not finish, only ```man cat``` works)  
+-```man``` (Not finished, only ```man cat``` works)  
 -```clear```  
 -```exit```  
 -```echo "<text>"[ >[>] <file>]```  
@@ -63,10 +63,14 @@ cd
 cat test.txt
 ```
 
+
+Functions you can use in your programs
+======================================
+
 ```fs.pwd``` : return path in array  
-```fs.cat(<file name>)``` : return contants of file   
+```fs.cat(<file name>)``` : return contents of file   
 ```fs.cd(<path>)``` : path should be a directory in fs.ls() list. Return true if change directory succeeds. Path can be a string or an array  
-```fs.ls()``` : return an array of directory contants  
+```fs.ls()``` : return an array of directory contents  
 ```fs.mkdir(<directory name>)``` : make a new directory  
 ```fs.write(<file name>, <file contants>)``` : write file  
 ```prs['<program name>']()``` : run a program   
