@@ -28,7 +28,7 @@ man['cat']="CAT(1)                   User Commands                              
 
 var prs={};
 prs['..']=null;
-prs['help']=function(a){var c="Available commands :";for(var e in prs){if(e!='..'){c+="\n    "+e;}} return c+"\nYou can use Tab for autocomplete.";};
+prs['help']=function(a){var c="Available commands :";for(var e in prs){if(e!='..'){c+="\n    "+e;}} return c+"\nYou can use Tab for autocomplete.\nSource code here : https://github.com/Oros42/js_terminal/";};
 prs['ls']=function(a){if(typeof a!='string'){a=a.join('');}if(a==''|| a=='.'){return fs.ls().join("\n");}else{var p="/"+fs.pwd.join('/');if(prs['cd'](a)){a="ls: "+a+": No such file or directory";}else{a=fs.ls().join("\n");}prs['cd'](p);return a;}};
 prs['cd']=function(a){if(typeof a!='string'){a=a.join('/');}if(a==''){a='/home/'+login;}if(a=='.'){return '';}else{a=a.split('/');if(a[0]==''){while(fs.pwd!=''){fs.cd('..');}a.shift();}while(d=a.shift()){if(d!=''){if(!fs.cd(d)){return "cd: "+d+": No such file or directory of this type"}}}}};
 prs['cat']=function(a){if(typeof a!='string'){a=a.join('');}if(a==''){return "Please give me a file name !";}else{var s=fs.cat(a);if(typeof s=='function'){s=s.toString();}if(s){if(typeof s!='string'){return ''}else{return s;}}else{return "cat: "+a+": No such file or directory";}}};
